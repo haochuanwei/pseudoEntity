@@ -8,7 +8,8 @@ from pseudo.generator import CustomGenerator
 from pseudo.entity import Place
 
 class RandomHotelGenerator(CustomGenerator):
-    def _custom_init(self):
+    def __init__(self):
+        super(RandomHotelGenerator, self).__init__()
         self.ChineseTel_prov_codes = pseudo.examples.ChineseTel_prov_codes
         self.Names_1 = ['蓝天', '城市', '清雅', '假日', '豪泰', '华庭']
         self.Names_2 = ['旅店', '快捷酒店', '宾馆', '大酒店', '客栈']

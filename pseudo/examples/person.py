@@ -9,7 +9,8 @@ from pseudo.generator import CustomGenerator
 from pseudo.entity import Person
 
 class RandomPersonGenerator(CustomGenerator):
-    def _custom_init(self):
+    def __init__(self):
+        super(RandomPersonGenerator, self).__init__()
         self.ChineseID_prov_codes = pseudo.examples.ChineseID_prov_codes
         self.ChineseID_multipliers = np.array([7, 9, 10, 5, 8, 4, 2, 1, 6, 3, 7, 9, 10, 5, 8, 4, 2])
         self.ChineseID_encodings = ['1', '0', 'X', '9', '8', '7', '6', '5', '4', '3', '2']

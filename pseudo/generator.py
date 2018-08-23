@@ -7,10 +7,6 @@ class CustomGenerator(object):
         random.seed(a=tic)
         self.maxdraws = 100
         self.draws = 0
-        self._custom_init()
-
-    def _custom_init(self):
-        pass
 
     def check_seed(self):
         self.draws += 1
