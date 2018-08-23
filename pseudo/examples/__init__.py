@@ -1,4 +1,4 @@
-ChineseID_prov_codes = {'北京':   '11', \
+chineseID_prov_codes = {'北京':   '11', \
                         '天津':   '12', \
                         '河北':   '13', \
                         '山西':   '14', \
@@ -30,7 +30,7 @@ ChineseID_prov_codes = {'北京':   '11', \
                         '宁夏':   '64', \
                         '新疆':   '65'}
 
-ChineseTel_prov_codes = {'北京':   '010', \
+chineseTel_prov_codes = {'北京':   '010', \
                          '天津':   '022', \
                          '河北':   '0311', \
                          '山西':   '0351', \
