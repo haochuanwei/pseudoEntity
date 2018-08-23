@@ -20,5 +20,10 @@ class Place(CustomEntity):
         self.info['name']    = "Hudson's"
         self.info['address'] = "221B Baker Street"
 
-
+if __name__ == '__main__':
+    print('\nInstantiating CustomEntity objects...')
+    p = Person()
+    q = Place()
+    for x in [p, q]:
+        print(type(x), x.bio())
 
