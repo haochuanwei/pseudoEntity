@@ -1,24 +1,27 @@
 import random
 import time
+from utils.assertion import Assertion
 
 class CustomGenerator(object):
     def __init__(self):
         tic = int(time.time() * 1000)
         random.seed(a=tic)
-        self.maxdraws = 100
-        self.draws = 0
+        self._A = Assertion()
+        self._maxdraws = 100
+        self._draws = 0
+        self._cache = {}
 
-    def check_seed(self):
-        self.draws += 1
-        if self.draws > self.maxdraws:
+    def _check_seed(self):
+        self._draws += 1
+        if self._draws > self._maxdraws:
             tic = int(time.time() * 1000)
             random.seed(a=tic)
-            self.draws = 0
+            self._draws = 0
 
-    def coinflip(self, s=2):
-        self.check_seed()
-        p = random.randint(0, 9999)
-        if p % s == 0:
+    def coinflip(self, s=0.5):
+        self._check_seed()
+        p = random.uniform(0.0, 1.0)
+        if p <= s:
             return True
         else:
             return False
