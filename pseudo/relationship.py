@@ -20,5 +20,11 @@ class Event(CustomRelationship):
         self.info['date'] = dt.date()
         self.info['time'] = dt.time()
 
+class Lodging(Event):
+    def __init__(self, person, hotel):
+        super(Lodging, self).__init__()
+        self.involved['person'] = person
+        self.involved['hotel']  = hotel
+
 
 
